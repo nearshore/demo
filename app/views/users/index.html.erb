@@ -1,0 +1,34 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag "users/index" %>
+<% end %>
+
+<% content_for :javascript do %>
+
+  <%= javascript_include_tag "backbone/actions/users/users" %>
+  <%= javascript_include_tag "backbone/models/users/user" %>
+  <%= javascript_include_tag "backbone/collections/users/users" %>
+  <%= javascript_include_tag "backbone/views/users/user-item" %>
+  <%= javascript_include_tag "users/user" %>
+  <%= javascript_include_tag "users/index" %>
+
+  <script type="text/template" id="user_row">
+    <%= render 'user_row' %>
+  </script>
+
+<% end %>
+
+<!-- Content Wrap -->
+<h2>User list</h2>
+<table class="bordered">
+  <thead>
+    <tr>
+      <th>#</th>        
+      <th>Full Name</th>
+      <th>Email Address</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table><!--end of table -->
+
